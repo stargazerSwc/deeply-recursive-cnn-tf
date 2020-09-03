@@ -16,6 +16,7 @@ Project: https://github.com/jiny2001/deeply-recursive-cnn-tf
 # import tensorflow as tf
 # 0903
 import tensorflow.compat.v1 as tf
+tf.compat.v1.disable_eager_execution()
 import super_resolution as sr
 import super_resolution_utilty as util
 
