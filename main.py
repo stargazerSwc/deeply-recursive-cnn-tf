@@ -13,7 +13,8 @@ Many thanks for: Masayuki Tanaka and Shigesumi Kuwashima
 Project: https://github.com/jiny2001/deeply-recursive-cnn-tf
 """
 
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import super_resolution as sr
 import super_resolution_utilty as util
 
