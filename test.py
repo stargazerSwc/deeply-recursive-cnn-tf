@@ -50,26 +50,26 @@ parser.add_argument('--residual',default=False, help="Using residual net")
 
 # Training or Others
 parser.add_argument('--is_training', default=True, type=float,help="Train model with 91 standard images")
-parser.add_argument('--dataset', default="set5", type=char ,help="Test dataset. [set5, set14, bsd100, urban100, all, test] are available")
-parser.add_argument('--training_set', default="ScSR", type=char, help="Training dataset. [ScSR, Set5, Set14, Bsd100, Urban100] are available")
+parser.add_argument('--dataset', default="set5",help="Test dataset. [set5, set14, bsd100, urban100, all, test] are available")
+parser.add_argument('--training_set', default="ScSR",  help="Training dataset. [ScSR, Set5, Set14, Bsd100, Urban100] are available")
 parser.add_argument('--evaluate_step',default=20, type=int,help="steps for evaluation")
 parser.add_argument('--save_step', default=2000, type=int,help="steps for saving learned model")
 parser.add_argument('--end_lr', default=1e-5, type=float,help="Training end learning rate")
-parser.add_argument('--checkpoint_dir', default="model", type=char, help="Directory for checkpoints")
-parser.add_argument('--cache_dir', default="cache", type=char, help="Directory for caching image data. If specified, build image cache")
-parser.add_argument('--data_dir', default="data", type=char, help="Directory for test/train images")
+parser.add_argument('--checkpoint_dir', default="model",  help="Directory for checkpoints")
+parser.add_argument('--cache_dir', default="cache",  help="Directory for caching image data. If specified, build image cache")
+parser.add_argument('--data_dir', default="data",  help="Directory for test/train images")
 parser.add_argument('--load_model', default=False, type=float,help="Load saved model before start")
-parser.add_argument('--model_name', default="", type=char, help="model name for save files and tensorboard log")
+parser.add_argument('--model_name', default="",  help="model name for save files and tensorboard log")
 
 # Debugging or Logging
-parser.add_argument('--output_dir', default="output", type=char, help="Directory for output test images")
-parser.add_argument('--log_dir', default="tf_log", type=char,help="Directory for tensorboard log")
+parser.add_argument('--output_dir', default="output",  help="Directory for output test images")
+parser.add_argument('--log_dir', default="tf_log", help="Directory for tensorboard log")
 parser.add_argument('--debug', default=False, type=float,help="Display each calculated MSE and weight variables")
 parser.add_argument('--initialise_log', default=True, type=float,help="Clear all tensorboard log before start")
 parser.add_argument('--visualize', default=True, type=float,help="Save loss and graph data")
 parser.add_argument('--summary', default=False, type=float,help="Save weight and bias")
 
-parser.add_argument('--file', default="", type=char, help="Test filename")
+parser.add_argument('--file', default="",  help="Test filename")
 
 if __name__ == '__main__':
 	opt = parser.parse_args()
