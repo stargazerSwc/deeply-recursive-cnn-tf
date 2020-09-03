@@ -415,7 +415,7 @@ class SuperResolution:
 	def save_model(self):
 
 		filename = self.checkpoint_dir + "/" + self.model_name + ".ckpt"
-		self.saver.save(self.sess, filename, save_format='h5')
+		self.saver.save(self.sess, filename)
 		print("Model saved [%s]." % filename)
 
 	def save_all(self):
