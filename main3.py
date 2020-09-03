@@ -23,12 +23,12 @@ import super_resolution_utilty as util
 
 #0903
 def del_all_flags(FLAGS):
-    flags_dict = opt._flags()
+    flags_dict = FLAGS._flags()
     keys_list = [keys for keys in flags_dict]
     for keys in keys_list:
-        opt.__delattr__(keys)
+        FLAGS.__delattr__(keys)
 
-del_all_flags(tf.opt.FLAGS)
+del_all_flags(tf.flags.FLAGS)
 
 import argparse
 import os
