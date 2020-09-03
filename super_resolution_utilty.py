@@ -18,7 +18,7 @@ from os import listdir
 from os.path import isfile, join
 
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from PIL import Image
 from scipy import misc
 
