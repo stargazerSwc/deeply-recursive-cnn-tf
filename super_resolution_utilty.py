@@ -527,7 +527,7 @@ def print_num_of_total_parameters():
 		shape = variable.get_shape()
 		variable_parameters = 1
 		for dim in shape:
-			variable_parameters *= dim.value
+			variable_parameters *= dim
 		total_parameters += variable_parameters
 		parameters_string += ("%s-%d, " % (str(shape), variable_parameters))
 
