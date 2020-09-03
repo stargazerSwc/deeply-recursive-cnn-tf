@@ -123,7 +123,7 @@ if __name__ == '__main__':
       model_name = "model_F%d_D%d_LR%f" % (opt.feature_num, opt.inference_depth, opt.initial_lr)
   else:
       model_name = "model_%s" % opt.model_name
-  model = sr.SuperResolution(FLAGS, model_name=model_name)
+  model = sr.SuperResolution(opt, model_name=model_name)
 
   test_filenames = util.build_test_filenames(opt.data_dir, opt.dataset, opt.scale)
   if opt.is_training:
