@@ -34,12 +34,12 @@ parser.add_argument('--inference_depth', default=9, type=int,help="Number of rec
 parser.add_argument('--batch_num', default=64, type=int,help="Number of mini-batch images for training")
 parser.add_argument('--batch_size', default=41, type=int,help="Image size for mini-batch")
 parser.add_argument('--stride_size', default=21, type=int,help="Stride size for mini-batch")
-parser.add_argument('--optimizer', default="adam", type=char,help="Optimizer: can be [gd, momentum, adadelta, adagrad, adam, rmsprop]")
+parser.add_argument('--optimizer', default="adam", help="Optimizer: can be [gd, momentum, adadelta, adagrad, adam, rmsprop]")
 parser.add_argument('--loss_alpha', default=1,type=int, help="Initial loss-alpha value (0-1). Don't use intermediate outputs when 0.")
 parser.add_argument('--loss_alpha_zero_epoch', default=25, type=int,help="Decrease loss-alpha to zero by this epoch")
 parser.add_argument('--loss_beta', default=0.0001, type=float,help="Loss-beta for weight decay")
 parser.add_argument('--weight_dev', default=0.001, type=float,help="Initial weight stddev")
-parser.add_argument('--initializer',default="he",type=char, help="Initializer: can be [uniform, stddev, diagonal, xavier, he]")
+parser.add_argument('--initializer',default="he", help="Initializer: can be [uniform, stddev, diagonal, xavier, he]")
 
 # Image Processing
 parser.add_argument('--scale', default=2, type=int,help="Scale for Super Resolution (can be 2 or 4)")
