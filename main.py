@@ -19,14 +19,22 @@ import tensorflow.compat.v1 as tf
 import super_resolution as sr
 import super_resolution_utilty as util
 
-flags = tf.app.flags
-FLAGS = flags.FLAGS
+# flags = tf.app.flags
+# FLAGS = flags.FLAGS
+# lst = list(FLAGS._flags().keys())
+# for key in lst:
+#     FLAGS.__delattr__(key)
 
 #0903
-FLAGS = tf.app.flags.FLAGS
-lst = list(FLAGS._flags().keys())
-for key in lst:
-    FLAGS.__delattr__(key)
+def del_all_flags(FLAGS):
+    flags_dict = FLAGS._flags()    
+    keys_list = [keys for keys in flags_dict]    
+    for keys in keys_list:
+        FLAGS.__delattr__(keys)
+
+del_all_flags(tf.flags.FLAGS)
+
+
 
 # Model
 flags.DEFINE_float("initial_lr", 0.001, "Initial learning rate")
