@@ -14,12 +14,19 @@ Project: https://github.com/jiny2001/deeply-recursive-cnn-tf
 """
 
 # import tensorflow as tf
+# 0903
 import tensorflow.compat.v1 as tf
 import super_resolution as sr
 import super_resolution_utilty as util
 
 flags = tf.app.flags
 FLAGS = flags.FLAGS
+
+#0903
+FLAGS = tf.app.flags.FLAGS
+lst = list(FLAGS._flags().keys())
+for key in lst:
+    FLAGS.__delattr__(key)
 
 # Model
 flags.DEFINE_float("initial_lr", 0.001, "Initial learning rate")
