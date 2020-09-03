@@ -16,8 +16,8 @@ Project: https://github.com/jiny2001/deeply-recursive-cnn-tf
 # import tensorflow as tf
 # 0903
 import tensorflow.compat.v1 as tf
-import super_resolution as sr
-import super_resolution_utilty as util
+import super_resolution-up as sr
+import super_resolution_utilty-up as util
 
 
 # 0903
